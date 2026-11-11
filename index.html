@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For her</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #e7e0f6;
+    --ink: #2b2542;
+    --soft: #6a6288;
+    --line: #c8bde6;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Figtree", system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  h2 {
+    font-family: "Young Serif", Georgia, serif;
+    font-weight: 400;
+    line-height: 1.1;
+    font-size: clamp(1.9rem, 6vw, 2.8rem);
+    margin-bottom: 2.5rem;
+  }
+
+  #s1 {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+  }
+  #s1 img {
+    max-width: 100%;
+    max-height: calc(100svh - 3rem);
+    display: block;
+  }
+  .placeholder {
+    width: min(80vw, 420px);
+    aspect-ratio: 3 / 4;
+    border: 1.5px dashed var(--line);
+    border-radius: 6px;
+    display: grid;
+    place-items: center;
+    color: var(--soft);
+    font-size: .9rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .list-section {
+    padding: 6rem 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  .list-section > div { width: 100%; max-width: 560px; }
+  ol { list-style: none; padding: 0; counter-reset: n; }
+  li {
+    counter-increment: n;
+    display: grid;
+    grid-template-columns: 2.4rem 1fr;
+    align-items: baseline;
+    padding: .85rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  li::before {
+    content: counter(n);
+    color: var(--soft);
+    font-size: .9rem;
+  }
+  #s3 .t { grid-column: 2; font-weight: 500; }
+  #s3 .a { grid-column: 2; color: var(--soft); font-size: .92rem; }
+  #s3 li::before { grid-row: 1 / span 2; }
+</style>
+</head>
+<body>
+
+<section id="s1">
+  <img src="her-drawing.jpg" alt="A drawing"
+       onerror="this.outerHTML='<div class=&quot;placeholder&quot;>Upload your drawing and name it her-drawing.jpg</div>'">
+</section>
+
+<section id="s2" class="list-section">
+  <div>
+    <h2>My favorite things about you</h2>
+    <ol>
+      <li>How fun you are</li>
+      <li>Your smile</li>
+      <li>How you act</li>
+      <li>Your eyes</li>
+      <li>Your voice</li>
+      <li>Your hair</li>
+      <li>Your drawing skills</li>
+      <li>Your jacket</li>
+      <li>Your teeth</li>
+      <li>Your face</li>
+      <li>How funny you are</li>
+      <li>How talkative you are</li>
+      <li>Your profile picture</li>
+      <li>How you message</li>
+      <li>How you draw perfectly with henna</li>
+      <li>Your little slippers</li>
+      <li>How you sometimes shake your feet when you walk</li>
+      <li>How you wave</li>
+      <li>Your name</li>
+      <li>Your age*</li>
+    </ol>
+  </div>
+</section>
+
+<section id="s3" class="list-section">
+  <div>
+    <h2>Songs that remind me of you</h2>
+    <ol>
+      <li><span class="t">Out Of My League</span><span class="a">Fitz and The Tantrums</span></li>
+      <li><span class="t">Teenage Dream</span><span class="a">Stephen Dawes</span></li>
+      <li><span class="t">Young and Beautiful</span><span class="a">Lana Del Rey</span></li>
+      <li><span class="t">Sailor Song</span><span class="a">Gigi Perez</span></li>
+      <li><span class="t">Something About You</span><span class="a">Eyedress</span></li>
+      
+    </ol>
+  </div>
+</section>
+
+</body>
+</html>
